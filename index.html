@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        let studentRecords = [ 
+        {name: 'John', id: 123, marks : 98 },
+        {name: 'Baba', id: 101, marks : 23 },
+        {name: 'yaga', id: 200, marks : 45 },
+        {name: 'Wick', id: 115, marks : 75 } 
+        ] 
+        <br><br>
+let q1=studentRecords.map(x=>x.name.toUpperCase())
+<br>
+console.log(q1)
+<br><br>
+let q2=studentRecords.filter(x=>x.marks>50)
+<br>
+console.log(q2)
+<br><br>
+let q3=studentRecords.filter(x=>(x.marks>50 && x.id>120))
+<br>
+console.log(q3)
+<br><br>
+let q4=q3.reduce((total,x)=> x.marks+total,0)
+<br>
+console.log(q4)
+<br><br>
+let q5=q3.filter(x=>x.marks >50).map(x=>x.name)
+<br>
+console.log(q5)
+<br><br>
+let q6=studentRecords.filter(x=> x.id>120).reduce((total,x)=> x.marks+total,0)
+<br>
+console.log(q6)
+<br><br>
+let q7=studentRecords.filter(x=> x.marks>35).reduce((total,x)=> x.marks+total,0)
+<br>
+console.log(q7)
+<br><br>
+let q8=studentRecords.map(x=>{ 
+    return (x.marks>50) ? x.marks : x.marks+15 
+}).filter(x=> x>50).reduce((total,x)=>{
+    return x+total
+} )
+<br>
+console.log(q8)
+<br><br>
+function class_structre(name,clas,roll_no){
+    this.name=name;
+    this.clas=clas;
+    this.roll_no=roll_no
+}<br>
+let arr=[]<br>
+arr.push(new class_structre("Ramesh","10th","05"))<br>
+arr.push(new class_structre("Suresh","10th","06"))<br>
+arr.push(new class_structre("Prathap","10th","07"))<br>
+arr.push(new class_structre("Priya","10th","08"))<br>
+arr.push(new class_structre("Pooja","10th","09"))<br>
+console.log(arr)
+    </div>
+</body>
+</html>
